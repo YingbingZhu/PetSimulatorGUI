@@ -1,0 +1,78 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:vm="clr-namespace:PetSimulatorGUI.ViewModels"
+        x:DataType="vm:MainWindowViewModel"
+        x:Class="PetSimulatorGUI.MainWindow"
+        Title="🐾 Pet Simulator"
+        Width="800" Height="600">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/> <!-- buttons column -->
+            <ColumnDefinition Width="*"/>    <!-- pet + status -->
+        </Grid.ColumnDefinitions>
+        <!-- Background image -->
+        <Image Source="avares://PetSimulatorGUI/Assets/background.jpg"
+               Stretch="UniformToFill"
+               IsHitTestVisible="False" 
+               Grid.ColumnSpan="2"  />
+        <!-- 🕹️ Left-side button panel -->
+        <StackPanel Grid.Column="0"
+                    Margin="20"
+                    Spacing="20"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left">
+            
+            <Button Width="100" Height="60" Background="#AAFFFFFF" Click="OnFeedClick">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBlock Text="🍖" FontSize="24" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Feed" FontSize="14" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Width="100" Height="60" Background="#AAFFFFFF" Click="OnPlayClick">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBlock Text="🎾" FontSize="24" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Play" FontSize="14" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Width="100" Height="60" Background="#AAFFFFFF" Click="OnSleepClick">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBlock Text="😴" FontSize="24" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Sleep" FontSize="14" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <!-- Main content -->
+        <Grid Grid.Column="1">
+            <!-- Canvas to manually position pet and overlay items -->
+            <Canvas HorizontalAlignment="Center" VerticalAlignment="Top" Height="500">
+                <Image x:Name="PetImage"
+                    Width="120" Height="120"
+                    Canvas.Left="-100" Canvas.Top="300"
+                    Stretch="Uniform" />
+            </Canvas>
+
+            <!-- Status overlay below -->
+            <StackPanel VerticalAlignment="Bottom" 
+                        HorizontalAlignment="Right"
+                        Margin="20" Spacing="10">
+                <TextBlock Text="Your Pet Status"
+                        FontSize="24" FontWeight="Bold"
+                        Foreground="White"
+                        HorizontalAlignment="Center"/>
+                <Border Background="#AAFFFFFF" CornerRadius="10" Padding="10">
+                    <TextBlock Text="{Binding Status}"
+                            FontSize="18" FontWeight="SemiBold"
+                            HorizontalAlignment="Center"
+                            Foreground="Black"/>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

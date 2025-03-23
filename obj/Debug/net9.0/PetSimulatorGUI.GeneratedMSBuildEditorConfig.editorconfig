@@ -21,8 +21,11 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/yingbingzhu/PetSimulatorGUI/App.axaml]
+[/Users/yingbingzhu/PetSimulatorGUI/Views/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/yingbingzhu/PetSimulatorGUI/MainWindow.axaml]
+[/Users/yingbingzhu/PetSimulatorGUI/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/yingbingzhu/PetSimulatorGUI/Views/PetSelectWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -1,5 +1,10 @@
+using Avalonia.Media.Imaging;
+using Avalonia.Platform.Storage;
+using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Platform;
 using PetSimulatorGUI.ViewModels;
+using System;
 
 namespace PetSimulatorGUI;
 
@@ -7,9 +12,14 @@ public partial class MainWindow : Window
 {
     private readonly MainWindowViewModel viewModel;
 
-    public MainWindow()
+    public MainWindow(string petImagePath)
     {
         InitializeComponent();
+        var image = this.FindControl<Image>("PetImage");
+        var stream = AssetLoader.Open(new Uri(petImagePath));
+        image.Source = new Bitmap(stream);
+
+
         viewModel = new MainWindowViewModel();
         DataContext = viewModel;
     }

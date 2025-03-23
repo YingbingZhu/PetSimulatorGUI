@@ -63,6 +63,7 @@
 /Users/yingbingzhu/PetSimulatorGUI/obj/Debug/net9.0/PetSimulatorGUI.AssemblyInfoInputs.cache
 /Users/yingbingzhu/PetSimulatorGUI/obj/Debug/net9.0/PetSimulatorGUI.AssemblyInfo.cs
 /Users/yingbingzhu/PetSimulatorGUI/obj/Debug/net9.0/PetSimulatorGUI.csproj.CoreCompileInputs.cache
+/Users/yingbingzhu/PetSimulatorGUI/obj/Debug/net9.0/PetSimulatorGUI.sourcelink.json
 /Users/yingbingzhu/PetSimulatorGUI/obj/Debug/net9.0/Avalonia/PetSimulatorGUI.dll
 /Users/yingbingzhu/PetSimulatorGUI/obj/Debug/net9.0/Avalonia/PetSimulatorGUI.pdb
 /Users/yingbingzhu/PetSimulatorGUI/obj/Debug/net9.0/refint/Avalonia/PetSimulatorGUI.dll
